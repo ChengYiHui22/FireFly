@@ -1,0 +1,72 @@
+<!--pages/First/components/content/content.wxml-->
+<!-- 首页内容 -->
+<view class="content ">
+    <!-- 新品推荐 -->
+    <view class="newest">
+        <!-- 标题 -->
+        <view class="title">新品推荐</view>
+        <!-- 内容 -->
+        <view class="newest-content">
+            <!-- 横向滚动 -->
+            <scroll-view class="scroll-view_H" scroll-x="true">
+                <view class="shop-item" wx:for="{{newest}}" wx:key="goods_id" bindtap="goToGoods" data-goods="{{item.goods_id}}">
+                    <!-- 图片 -->
+                    <view class="item-img">
+                        <image src="{{item.image[0].file_path}}" mode="aspectFit" class="item-image"></image>
+                    </view>
+                    <!-- 简介 -->
+                    <view class="item-info">
+                        {{item.goods_name}}
+                    </view>
+                    <!-- 价格 -->
+                    <view class="item-price"> ￥{{item.spec[0].goods_price}}</view>
+
+                </view>
+
+
+            </scroll-view>
+      
+
+        </view>
+
+    </view>
+    <!-- 猜您喜欢 -->
+    <view class="like">
+      <view class="line">
+        <van-divider
+            contentPosition="center"
+            customStyle="color: #333; border-color: #ddd; font-size: 14px;">
+        <van-icon name="fire" color="red"/>
+        猜您喜欢
+        </van-divider>
+      </view>
+    </view>
+    <view class="like-content">
+        <view class="like-content-item" wx:for="{{best}}" wx:key="goods_id"  bindtap="goToGoods" data-goods="{{item.goods_id}}">
+            <!-- 图片 -->
+            <view class="like-img">
+                <image src="{{item.image[0].file_path}}" mode="scaleToFill" class="like-image"></image>
+            </view>
+            <!-- 价格 标题 -->
+            <view class="like-info">
+                <view class="like-title">
+                    {{item.goods_name}}
+                </view>
+                <view class="like-price item-price">￥{{item.spec[0].goods_price}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="footer">
+        <van-divider
+            contentPosition="center"
+            customStyle="color: #666; border-color: #ddd; font-size: 14px;">
+            我是有底线的
+        </van-divider>
+      </view>
+    
+ 
+   
+     
+
+</view>

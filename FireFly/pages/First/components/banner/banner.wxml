@@ -1,0 +1,17 @@
+<!--pages/First/components/banner/banner.wxml-->
+<swiper
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+    circular="{{circular}}"
+    indicator-color="#000"
+    indicator-active-color="#fff"
+  
+  >
+    <block wx:for="{{imgObj}}" wx:key='index'>
+      <swiper-item>
+        <image style="display:block;width:98%;margin:0 auto;" src="{{item.imgName}}" class="slide-image" mode="widthFix" />
+      </swiper-item>
+    </block>
+  </swiper>
