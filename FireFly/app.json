@@ -1,39 +1,48 @@
 {
     "pages": [
-      "pages/First/first",
-      "pages/classfiy/classify",
+        "pages/First/first",
+        "pages/classfiy/classify",
         "pages/Cart/Cart",
-        "pages/Mine/mine"
+        "pages/Mine/mine",
+        "pages/goods/goods"
     ],
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Weixin",
-        "navigationBarTextStyle": "black"
+        "navigationBarBackgroundColor": "#ff9966",
+        "navigationBarTitleText": "萤火小程序商城",
+        "navigationBarTextStyle": "white"
     },
     "tabBar": {
-      "list": [{
-        "pagePath": "pages/First/first",
-        "text": "首页",
-        "iconPath": "iconPath",
-        "selectedIconPath": "selectedIconPath"
-      },{
-        "pagePath": "pages/classfiy/classify",
-        "text": "分类",
-        "iconPath": "iconPath",
-        "selectedIconPath": "selectedIconPath"
-      },{
-        "pagePath": "pages/Cart/Cart",
-        "text": "购物车",
-        "iconPath": "iconPath",
-        "selectedIconPath": "selectedIconPath"
-      },{
-        "pagePath": "pages/Mine/mine",
-        "text": "我的",
-        "iconPath": "iconPath",
-        "selectedIconPath": "selectedIconPath"
-      }]
+        "color": "#6e6d6b",
+        "selectedColor": "#ff9966",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/First/first",
+                "text": "首页",
+                "iconPath": "./images/tabBar/home.png",
+                "selectedIconPath": "./images/tabBar/home_on.png"
+            },
+            {
+                "pagePath": "pages/classfiy/classify",
+                "text": "分类",
+                "iconPath": "./images/tabBar/cate.png",
+                "selectedIconPath": "./images/tabBar/cate_on.png"
+            },
+            {
+                "pagePath": "pages/Cart/Cart",
+                "text": "购物车",
+                "iconPath": "./images/tabBar/cart.png",
+                "selectedIconPath": "./images/tabBar/cart_on.png"
+            },
+            {
+                "pagePath": "pages/Mine/mine",
+                "text": "我的",
+                "iconPath": "./images/tabBar/user.png",
+                "selectedIconPath": "./images/tabBar/user_on.png"
+            }
+        ]
     },
-    "style": "v2",
     "sitemapLocation": "sitemap.json"
 }

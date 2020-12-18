@@ -1,2 +1,15 @@
 <!--pages/First/first.wxml-->
-<text>pages/First/first.wxml</text>
+<view class="root">
+<!--搜索按钮  点击按钮跳到搜素页面-->
+
+    <view class="btn">
+        <van-button type="default" block icon="search" > 搜索商品</van-button>
+    </view>
+    <Banner imgObj="{{imgarray}}" bind:goTo="goTo"></Banner>
+    <Content newest="{{newest}}" best="{{best}}" bind:goTo="goTo"></Content>
+    <!-- 回到顶部 -->
+    <view class="tap" wx:if="{{top==1}}" bind:goTo="goTop">
+        <van-icon name="upgrade" size="70rpx" color="#999" />
+    </view>
+
+</view>
