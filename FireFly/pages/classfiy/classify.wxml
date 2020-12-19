@@ -1,2 +1,59 @@
 <!--pages/classfiy/classify.wxml-->
-<text>pages/classfiy/classify.wxml</text>
+<!-- 商品分类 -->
+<view class="classify">
+<!-- 搜素按钮 -->
+<view class="search">
+    <van-button color="#f1f1f1" block round icon="search" size="small">搜素商品</van-button>
+</view>
+
+<!-- 商品分类 -->
+<view class="content">
+   
+        <scroll-view scroll-y="true" class="left">
+            <view class="left-title {{title=='全部'? 'leftactive': null}}" > 全部</view>
+            <view class="left-title {{title==item.name ?'leftactive': null}}" wx:for="{{categoryList}}" wx:key="category_id" bindtap="selectCategory" data-title="{{item.name}}" data-id="{{item.category_id}}">
+                {{item.name}}
+
+            </view>
+        </scroll-view>
+        <!-- 分类详情 -->
+        <scroll-view scroll-y="true" class="right"> 
+            <view class="goods-item" wx:for="{{ dataDetail}}" wx:key="goods_id" bindtap="goToGoods" data-goos_id="{{item.goods_id}}">
+                <view class="goods-item-detail">
+                    <!-- 图片 -->
+                    <view class="goods-item-image">
+                        <image src="{{item.goods_image}}" class="goods-item-img"></image>
+                    </view>
+                    <!-- info -->
+                    <view class="goods-item-info">  
+                        <!-- 标题 -->
+                        <view class="goods-item-title">
+                            {{item.goods_name}}
+                        </view>
+                        <!-- 商品描述 -->
+                        <view class="goods-item-desc">
+                            <!-- 销量 -->
+                            <view class="goods-item-sale">
+                                已售{{item.goods_sales}}件
+                            </view>
+                            <!-- 价格 -->
+                            <view>
+                                <text class="now-price">￥{{item.goods_sku.goods_price}}</text>
+                                <text class="old-price">￥{{item.goods_sku.line_price}}</text>
+                            </view>
+
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <!-- 无商品展示 -->
+            <view class="no-goods" wx:if="{{dataDetail.length==0}}">
+                <image src="../../images/no.png" mode="center"></image>
+            </view>
+
+        </scroll-view>
+    
+
+</view>
+
+</view>

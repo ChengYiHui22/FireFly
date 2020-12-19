@@ -42,6 +42,15 @@ Page({
           scrollTop:0,
         })
         },
+        //去搜索页面
+        goToSearch(){
+            wx.navigateTo({
+              url: '../search/search',
+              success: (result) => {},
+              fail: (res) => {},
+              complete: (res) => {},
+            })
+        },
 
     /**
      * 生命周期函数--监听页面加载

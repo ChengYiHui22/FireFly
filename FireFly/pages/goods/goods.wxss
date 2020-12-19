@@ -6,7 +6,8 @@
 }
 .goods{
   width: 100%;
-  background-color: #f5f5f5;  
+  background-color: #f5f5f5; 
+  position: relative; 
 }
 .goods-img{
     height: 750rpx;
@@ -65,8 +66,7 @@
 }
 .select-goods{
     margin-top: 25rpx;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
+    margin-bottom: 40rpx;
     
 }
 .select-goods-item{
@@ -85,8 +85,49 @@
     color: #444;
     padding-bottom:2rpx ;
 }
-.btn{
-    width: 100rpx !important;
-    height: 33px !important;
-    line-height: 33px !important; 
+
+.describe{
+    background-color: #fff;
+}
+.describe-title{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px;
+    font-size: 31rpx;
+    border-bottom: 1rpx solid #eee;
+   
+}
+
+
+.main{
+    
+    position:fixed;
+    bottom: 300rpx;
+    right: 30rpx;
+   
+}
+.icon{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    background-color:rgba(0,0,0,0.4);
+    text-align: center;
+    line-height: 90rpx;
+    margin-bottom: 20rpx;
+}
+.menu-classify{
+    position:fixed;
+    bottom: 400rpx;
+    right: 30rpx;
+   
+}
+.active{
+background-color: #ff5454 !important;
+}
+
+.tap{
+    position:fixed;
+    bottom: 200rpx;
+    right: 30rpx;
+    
 }

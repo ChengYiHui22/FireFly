@@ -7,6 +7,10 @@
     "van-collapse-item": "@vant/weapp/collapse-item/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-button": "@vant/weapp/button/index",
-    "van-field": "@vant/weapp/field/index"
-  }
+    "van-field": "@vant/weapp/field/index",
+    "van-transition": "@vant/weapp/transition/index"
+  },
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "商品详情",
+  "navigationBarTextStyle": "black"
 }

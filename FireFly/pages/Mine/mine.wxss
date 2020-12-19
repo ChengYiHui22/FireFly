@@ -1,1 +1,121 @@
 /* pages/Mine/mine.wxss */
+.user{
+    position: relative;
+    background: #fff;
+    margin-bottom: 150rpx;
+   
+}
+.user-header{
+    display: flex;
+    padding-top: 1px;
+    width: 100%;
+    height: 310rpx;
+    align-content: center;
+    background-color: #fd0;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: auto 100%;
+}
+button[plain] {
+    border:none;
+    
+ }
+.user-header-login{
+    display: flex;
+    margin: auto;
+    margin-bottom: 135rpx;
+    width: 79%;
+    align-items: center;
+
+}
+.user-avatar{
+    display: block;
+    margin-right: 30rpx;
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    border: 5rpx solid #fff;
+    overflow: hidden;
+}
+.user-avatar image{
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+
+}
+.user-title{
+    font-size: 32rpx;
+    padding: 20rpx 0;
+
+}
+.navbar{
+    position: absolute;
+    left: 19rpx;
+    top: 200rpx;
+    margin: auto;
+    padding: 15rpx 0;
+    width: 95%;
+    box-shadow: 0 1rpx 5rpx 0px rgba(0, 0, 0, 0.05);
+    font-size: 30rpx;
+    border-top: 1rpx solid #eee;
+    border-radius: 5rpx;
+    background: #fff;
+    z-index:20;
+    border-bottom: 1px solid #eee;
+}
+.navbar-top{
+    margin: auto;
+    padding-bottom: 10rpx;
+    width: 91%;
+    height: 70rpx;
+    border-bottom: 1px solid #eee;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+}
+.f-30{ 
+    font-size: 30rpx;
+}
+.f-24{
+    color: #666;
+    font-size: 24rpx;
+}
+.navbar-bottom{
+    width: 100%;
+    padding: 20rpx 0px;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+.one{
+    text-align: center;
+}
+.navbar-bottom-title{
+    display: block;
+    font-size: 24rpx;
+    color: #666;
+    text-align: center;
+    margin-right: 10rpx;
+}
+.menu{
+    margin-top: 160rpx;
+
+}
+.menu-child{
+    height: 92rpx;
+    border-bottom: 2rpx solid #eee;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.5%;
+    line-height: 92rpx;
+    color: #444;
+    font-size: 30rpx;
+}
+.menu-child-left{
+    color: #444;
+    font-size: 30rpx;
+}
+.text{
+    margin-left: 20rpx;
+}

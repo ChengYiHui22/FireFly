@@ -4,7 +4,9 @@
         "pages/classfiy/classify",
         "pages/Cart/Cart",
         "pages/Mine/mine",
-        "pages/goods/goods"
+        "pages/goods/goods",
+        "pages/search/search",
+        "pages/list/list"
     ],
     "window": {
         "backgroundTextStyle": "light",

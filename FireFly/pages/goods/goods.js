@@ -1,8 +1,7 @@
 // pages/goods/goods.js
-import Url from "../../utils/imgparse"
 import fetch from "../../fetch"
 import setinfo from "../../setinfo"
- WxParse = require('../../wxParse/wxParse.js');
+let wxParse = require('../../wxParse/wxParse.js');
 Page({
 
     /**
@@ -19,15 +18,69 @@ Page({
         current:0,
         dataObj:{},
         activeNames: ['1'],
-        value:1,
-        content:''
-        
+        value:1,//购买数量
+        top:0,
+        show:false,
+       
     },
     onChange(event) {
         this.setData({
           activeNames: event.detail,
         });
       },
+      //添加购买数量
+      onCount(){
+          this.setData({
+            value:this.data.value+1
+          })
+      },
+      //减少购买数量
+      downCount(){
+       if( this.data.value!=1){
+        this.setData({
+          value:this.data.value-1
+        })
+       }else{
+        this.setData({
+          value:1
+        })
+          
+      }
+      },
+       //监听界面滚动
+    onPageScroll (e) { 
+      if(e.scrollTop>300){
+          this.setData({
+              top:1
+          })
+      }else{
+          this.setData({
+              top:0,
+          })
+      }
+      },
+      //回到顶部
+      goTop(e){
+      wx.pageScrollTo({
+        duration: 0,
+        scrollTop:0,
+      })
+      },
+      //显示图标
+      showIcon(){
+        this.setData({
+          show:!this.data.show
+        })
+      },
+//跳转页面
+goToBar(e){
+    wx.switchTab({
+      url:e.currentTarget.dataset.title,
+      success: (res) => {},
+      fail: (res) => {},
+      complete: (res) => {},
+    })
+},
     /**
      * 生命周期函数--监听页面加载
      */
@@ -38,12 +91,15 @@ Page({
             this.setData({
                 image:data.data.data.detail.image,
                 dataObj:data.data.data.detail,
-                content:Url(data.data.data.detail.content)
             })
-
+            let _this = this;
+            wxParse.wxParse('content', 'html', data.data.data.detail.content,_this, 0);
+            
         }).catch(error=>{
             console.log(error)
         })
+       
+
 
        
     },

@@ -1,2 +1,74 @@
 <!--pages/Mine/mine.wxml-->
-<text>pages/Mine/mine.wxml</text>
+<!-- 个人中心 -->
+<view class="user" >
+    <view class="user-header" style="background-img:url('../../images/user-bg.png')">
+    <!-- 登录 -->
+    <button class="user-header-login" open-type="getUserInfo" bindgetuserinfo="getUserInfo" plain="true">
+        <!-- 头像 -->
+        <view class="user-avatar">
+            <image src="../../images/default-avatar.jpg"></image>
+        </view>
+        <view class="user-title">{{loginTitle}}</view>
+
+    </button>
+     <!-- 导航 -->
+     <view class="navbar">
+        <!-- 上 -->
+        <view class="navbar-top">
+            <text class="f-30">我的订单</text>
+            <text class="f-24">全部订单 </text>
+
+        </view>
+        <!-- 下 -->
+      
+        <view class="navbar-bottom">
+            <view class="one">
+                <van-icon name="description" size="40rpx"/>
+                <view class="navbar-bottom-title">全部订单</view>
+            </view>
+            <view class="one">
+                <van-icon name="pending-payment" size="40rpx" />
+                <view class="navbar-bottom-title">待付款</view>
+            </view>
+            <view class="one">
+                <van-icon name="logistics" size="40rpx"/>
+                <view class="navbar-bottom-title">待发货</view>
+            </view>
+            <view class="one">
+                <van-icon name="records"size="40rpx" />
+                <view class="navbar-bottom-title">待收货</view>
+            </view>
+
+        </view>
+    </view>
+    
+    </view>
+    <!-- 菜单 -->
+    <view class="menu">
+        <view class="menu-child">
+            <view class="menu-child-left"> 
+                <van-icon name="location-o" size="40rpx"/>
+                <text class="text">收货地址</text>
+            </view>
+            <van-icon name="arrow " />
+        </view>
+        <view class="menu-child">
+            <view class="menu-child-left"> 
+                <van-icon name="question-o" size="40rpx"/>
+                <text class="text">我的帮助</text>
+            </view>
+            <van-icon name="arrow "  />
+        </view>
+        <view class="menu-child">
+            <view class="menu-child-left"> 
+                <van-icon name="service-o" size="40rpx"/>
+                <text class="text">联系客服</text>
+            </view>
+            <van-icon name="arrow "  />
+        </view>
+      
+        
+      
+    </view>
+   
+</view>

@@ -1,1 +1,88 @@
 /* pages/classfiy/classify.wxss */
+.content{
+    height: 508px;
+    display: flex;
+}
+.search{
+    margin-top: 20rpx;
+    padding: 0 5%;
+    margin-bottom:20rpx ;
+}
+.left{
+    flex-direction: column;
+    display: flex;
+    width: 22.2222%;
+    color: #444;
+    height: 100%;
+    background: #f8f8f8;
+    
+}
+.left-title{
+    position: relative;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    z-index: 10;
+    font-size: 26rpx;
+
+}
+.leftactive{
+    background: #fff!important;
+    color: #ff495e !important;
+    border-right: none !important;
+    font-size: 28rpx !important;
+}
+.right{
+    width: 77.7778%;
+}
+.goods-item{
+  
+    width: 100%;
+    margin-bottom: 10rpx;
+    padding: 16rpx;
+    box-sizing: border-box;
+    background: #fff;
+}
+.goods-item-detail{
+    display: flex;
+}
+.goods-item-image{
+   
+    width: 36%;
+    background: #fff;
+    align-items: center
+}
+.goods-item-img{
+    display: block;
+    width: 190rpx;
+    height: 190rpx
+}
+.goods-item-info{
+    position: relative;
+    width: 60%;
+    padding-left: 20rpx;
+}
+.goods-item-title{
+    height: 72rpx;
+    margin-top: 20rpx;
+    font-size: 26rpx;
+    color: #333;
+}
+.goods-item-desc{
+    margin-top: 8rpx;
+}
+.goods-item-sale{
+    color: #999;
+    font-size: 24rpx;
+}
+
+.now-price{
+    margin-right: 16rpx;
+    color: #f03c3c;
+    font-size: 27rpx;
+}
+.old-price{
+    color: #999;
+    font-size: 24rpx;
+    text-decoration: line-through;
+}
