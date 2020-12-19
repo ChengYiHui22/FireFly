@@ -1,0 +1,26 @@
+<!--pages/search/search.wxml-->
+<!-- 搜索页面 -->
+<view class="search">
+<view class="search-input">
+  <!-- 图标 -->
+  <van-icon name="search" size="40rpx"  />
+  <!-- 输入框 -->
+  <input type="text" class="input" bindinput="getSeachContent" />
+  <!-- 按钮 -->
+  <text class="search-btn" bindtap="searchBtn" >搜索</text>
+</view>
+
+<!-- 最近搜索 -->
+    <view class="recent-search">
+        <!-- 标题 -->
+        <view class="recent-title">
+            <text class="recent-search-title">最近搜索</text>
+            <van-icon name="delete"  size="40rpx" bindtap="deleteHistory"/>
+        </view>
+        <!-- 搜索内容 -->
+        <view class="search-content" wx:for="{{searchHistroy}}" wx:key="item">
+                <view class="search-detail">{{item}}</view>
+           
+        </view>
+    </view>
+</view>

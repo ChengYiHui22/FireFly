@@ -1,0 +1,61 @@
+<!--pages/list/list.wxml-->
+<!-- 商品列表 -->
+<view class="list">
+   <!--搜索-  -->
+   <view class="search">
+        <view class="search-input" bindtap="goToSearch">
+            <van-icon name="search" size="40rpx"  color= "#999" class="vant-icon"/>
+             <text>搜索商品</text>
+        </view>
+        <van-icon name="qr" size="40rpx"   color= "#999"/>
+    </view>
+
+    <!-- 分类 -->
+    <view class="classify">
+        <!-- 综合 -->
+        <view class="classify-one {{title=='综合' ? 'classify-active' :null}}" bindtap="selectGoods" data-title="综合">综合</view>
+        <!-- 销量 -->
+        <view class="classify-one {{title=='销量' ? 'classify-active' :null}}" bindtap="selectGoods" data-title="销量">销量</view>
+        <!-- 价格 -->
+        <view class="classify-one {{title=='价格' ? 'classify-active' :null}}" bindtap="selectPrice" data-title="价格">价格
+
+        </view>
+        
+        <view class="angular">
+                <van-icon name="play" size="24rpx" class="on-price" color="{{!price && title=='价格'? '#ff495e' :null}}"/>
+                <van-icon name="play" size='24rpx' class="down-price" color="{{price&& title=='价格'? '#ff495e' :null}}"/>
+        </view>
+
+    </view>
+
+    <!-- 内容 -->
+    <scroll-view class="scroll-H" scroll-y="true">
+        <view class="items">
+            <view class="list-item" wx:for="{{dataArray}}" wx:key="goods_id" bindtap="goToGoods" data-goos_id="{{item.goods_id}}">
+                <!-- 图片 -->
+                <view class="list-item-img">
+                    <image src="{{item.goods_image}}" class="list-item-image"></image>
+                </view>
+                <!-- 信息 -->
+                <view class="list-item-info">
+                    <!-- 标题 -->
+                    <view class="list-item-title">{{item.goods_name}}</view>
+                    <!-- 价格 -->
+                    <view class="list-item-price">
+                        <text class="now-price">￥{{item.goods_sku.goods_price}}</text>
+                        <text class="old-price">￥{{item.goods_sku.line_price}} </text>
+                    </view>
+
+                </view>
+
+            </view>
+        </view>
+       <view class="no-contnt" wx:if="{{dataArray.length==0}}">
+        <image src="../../images/no_content.png" class="no-content-img"></image>
+        <view class="p">亲,没有相关内容</view>
+       </view>
+    </scroll-view>
+    <text class="cont" wx:if="{{dataArray.length > 8}}">亲, 没有相关内容</text>
+</view>
+
+
